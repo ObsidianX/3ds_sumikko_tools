@@ -54,7 +54,7 @@ def extract_bin():
 
 
 def create_bin():
-    strings = json.loads(open(JSON_NAME, 'rb').read(), encoding='utf-8')
+    strings = json.loads(open(JSON_NAME, 'r').read(), encoding='utf-8')
     output = open(BIN_NAME, 'wb')
 
     count = struct.pack('<H', len(strings))
